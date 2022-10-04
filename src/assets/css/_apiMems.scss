@@ -4,11 +4,20 @@
     margin: 20px;
     justify-content: center;
 
+    @include media($mobile){
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
     &__search{
         margin: 0px 20px;
         width: 300px;
-        background-color: red;
         height: 30px;
+
+        @include media($mobile){
+            margin-bottom: 10px;
+            order: 1;
+            width: 90%;
+        }
 
         & input{
             width: 100%;
@@ -20,9 +29,14 @@
     }
 
     &__button{
-        
         width: 100px;
         height: 40px;
+        @include media($mobile){
+            order: 2;
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+        }
 
         & button{
             width: 100%;
@@ -31,6 +45,11 @@
             border-radius: 15px;
             background-color: rgb(114, 151, 245);
             @include font($RobotoSlab,400,20px,24px,white);
+
+            @include media($mobile){
+                font-size: 16px;
+                color: red;
+            }
             
         }
     }

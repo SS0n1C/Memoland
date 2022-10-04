@@ -37,18 +37,11 @@ data(){
   }
 },
 methods:{
-
+// key = 488b205a6044402f8b084ee7f066771b
+// key = c5a6949651ae41e0a44f513db5924261
   test() {
-    // const options = {
-    //   method: 'GET',
-    //   headers: {
-		// 'X-RapidAPI-Key': '7541cfe474msh5e42f59ab0e1294p153af3jsnf35c59e5af66',
-		// 'X-RapidAPI-Host': 'humor-jokes-and-memes.p.rapidapi.com'
-	  //   }
-  
-    // };
     async function apisyn() {
-      let URL = "https://api.humorapi.com/memes/random?keywords=joke&api-key=488b205a6044402f8b084ee7f066771b`"
+      let URL = `https://api.humorapi.com/memes/random?keywords=&api-key=c5a6949651ae41e0a44f513db5924261`;
       const res = await fetch(`${URL}`);
       const data = await res.json();
       console.log(data)
@@ -64,7 +57,7 @@ methods:{
   console.log(this.keyword)
 
   async function apisyn() {
-      let URL = `https://api.humorapi.com/memes/random?keywords=${testing}&api-key=488b205a6044402f8b084ee7f066771b`;
+      let URL = `https://api.humorapi.com/memes/random?keywords=${testing}&api-key=c5a6949651ae41e0a44f513db5924261`;
       const res = await fetch(`${URL}`);
       const data = await res.json();
       console.log(data)
@@ -77,17 +70,8 @@ methods:{
 },
 mounted() {
     window.addEventListener('load', () => {
-    //   const options = {
-    //   method: 'GET',
-    //   headers: {
-		// 'X-RapidAPI-Key': '7541cfe474msh5e42f59ab0e1294p153af3jsnf35c59e5af66',
-		// 'X-RapidAPI-Host': 'humor-jokes-and-memes.p.rapidapi.com'
-	  //   }
-  
-    // };
-    
   async function apisyn() {
-      let URL = `https://api.humorapi.com/memes/random?keywords=rocket&api-key=488b205a6044402f8b084ee7f066771b`;
+      let URL = `https://api.humorapi.com/memes/random?keywords=&api-key=c5a6949651ae41e0a44f513db5924261`;
       const res = await fetch(`${URL}`);
       const data = await res.json();
       console.log(data)

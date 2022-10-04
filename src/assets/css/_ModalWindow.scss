@@ -71,12 +71,16 @@
                     &::after {
                         content: "100%";
                         position: absolute;
-                        left: 120px;
+                        left: 100px;
                         @include font($RobotoSlab, 400, 21px, 24px, $dark2);
                         
                         @include media($table){
                         font-size: 18px;
                         left: 50px;
+                        }
+                        @include media($mobile){
+                            font-size: 14px;
+                            left: 40px;
                         }
                     }
                 }
@@ -90,13 +94,18 @@
                     &::after {
                         content: "0%";
                         position: absolute;
-                        left: 8.5rem;
+                        left: 100px;
                         bottom: 0;
                         @include font($RobotoSlab, 400, 21px, 24px, $dark2);
 
                         @include media($table){
                             font-size: 18px;
                             left: 50px;
+                            }
+                            @include media($mobile){
+                                font-size: 14px;
+                                left: 40px;
+                                
                             }
                     }
                 }
@@ -110,13 +119,21 @@
                         @include media($table){
                             left: -3.2rem;
                             }
+                            @include media($mobile){
+                                left: -40px;
+                            }
                     }
                 }
 
                 &:last-of-type {
                     &::after {
                         left: -3rem;
+
+                        @include media($mobile){
+                            left: -30px;
+                        }
                     }
+
                 }
             }
         }
@@ -154,6 +171,12 @@
                     height: 15rem;
                     font-size: 18px;
                 }
+                @include media($mobile){
+                    font-size: 14px;
+                    width: 10rem;
+                    height: 10rem;
+                }
+
                 &--txt {
                     position: relative;
                     z-index: 10;
@@ -184,6 +207,10 @@
                         width: 6rem;
                         height: 6rem;
                         top:-90px;
+                    }
+                    @include media($mobile){
+                        top:-90px;
+                        left: -40px;
                     }
                 }
             }
